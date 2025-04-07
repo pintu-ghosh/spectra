@@ -1,0 +1,34 @@
+/* Custom Theme Styles */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfcfb;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1, h2, h3 {
+  color: #005a9c;
+}
+
+a {
+  color: #cc5500;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img.profile {
+  width: 180px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
