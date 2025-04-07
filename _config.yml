@@ -1,2 +1,7 @@
-remote_theme: pages-themes/minimal@v0.2.0
-
+title: Pintu Ghosh
+description: A personal space to share thoughts, ideas, and experiences on science, creativity, and life.
+theme: minima
+markdown: kramdown
+author: Pintu Ghosh
+email: ghosh@zju.edu.cn
+url: "https://pintu-ghosh.github.io/spectra/" # Change this to your GitHub Pages URL
