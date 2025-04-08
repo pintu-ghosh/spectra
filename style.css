@@ -32,3 +32,20 @@ img.profile {
   max-width: 800px;
   margin: 0 auto;
 }
+.tab {
+  display: none;
+  padding: 1rem;
+  border-top: 2px solid #ccc;
+}
+
+.tab-buttons button {
+  padding: 0.5rem 1rem;
+  margin-right: 5px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+}
+
+.tab-buttons button.active {
+  background: #ccc;
+}
