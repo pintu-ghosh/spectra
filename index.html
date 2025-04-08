@@ -9,22 +9,30 @@
 
   
 <body>
+  <h1>My Personal Homepage</h1>
   <div class="container">
     <img src="profile_pic.png" alt="Pintu Ghosh" class="profile">
     <h1>👋 Welcome to My Homepage — <em>spectra</em></h1>
     <h5>A personal space to share thoughts, ideas, and experiences on science, creativity, and life — one post at a time.</h3>
 
     <hr />
+  </div>
+  <div class="tab-buttons">
+    <button onclick="showTab('about')" class="active">About</button>
+    <button onclick="showTab('projects')">Projects</button>
+    <button onclick="showTab('publications')">Publications</button>
+    <button onclick="showTab('contact')">Contact</button>
+  </div>
 
+  <div id="about" class="tab" style="display: block;">
+    <h2>About Me</h2>
     <p>
       Hi, I’m <strong>Pintu Ghosh</strong>, a physicist specializing in 
       <strong>nanophotonics</strong>, <strong>light–matter interactions</strong>, and 
-      <strong>metasurfaces</strong>. My research explores how light behaves at the nanoscale, aiming to push the limits of optical functionality through theory, simulation, and experiments. I am currently an Associate Professor at the College of Optical Science and Engineering, Zhejiang University, in Hangzhou, China.
+      <strong>metasurfaces</strong>. My research explores how light behaves at the nanoscale, aiming to push the limits of optical functionality through theory, simulation, and experiments. 
+      I am currently an Associate Professor at the College of Optical Science and Engineering, Zhejiang University, in Hangzhou, China.
     </p>
-
     <hr />
-
-    <h2>🔬 About Me</h2>
     <ul>
       <li>🧪 Passionate about <strong>photonic design</strong></li>
       <li>💡 Working on topics like:
@@ -37,9 +45,9 @@
       </li>
       <li>🖥️ Skilled in FDTD, RCWA, COMSOL, MATLAB, Python</li>
     </ul>
+  </div>
 
-    <hr />
-
+  <div id="projects" class="tab">
     <h2>📝 Recent Projects</h2>
     <ul>
       <li>📐 <strong>Gratings for directional mid-IR emission</strong></li>
@@ -47,8 +55,9 @@
       <li>🌀 <strong>Metasurfaces</strong></li>
     </ul>
 
-    <hr />
+  </div>
 
+  <div id="publications" class="tab">
     <h2>📚 Publications</h2>
     <p>You can find my publications on:</p>
     <ul>
@@ -56,9 +65,9 @@
       <li><a href="https://orcid.org/0000-0003-3676-0151" target="_blank">ORCID</a></li>
       <li><a href="https://www.researchgate.net/profile/Pintu-Ghosh" target="_blank">ResearchGate</a></li>
     </ul>
+  </div>
 
-    <hr />
-
+  <div id="contact" class="tab">
     <h2>📫 Get in Touch</h2>
     <ul>
       <li>🌐 <a href="https://person.zju.edu.cn/en/ghosh" target="_blank">Official Webpage</a></li>
@@ -66,10 +75,19 @@
       <li>💼 <a href="#" target="_blank">LinkedIn</a></li>
     </ul>
 
-    <hr />
-    <p><em>Thanks for visiting!</em></p>
+  </div>
 
-    </div>
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab').forEach(tab => tab.style.display = 'none');
+      document.querySelectorAll('.tab-buttons button').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(id).style.display = 'block';
+      event.target.classList.add('active');
+    }
+  </script>
+
+  <hr />
+    <p><em>Thanks for visiting!</em></p>
 
 </body>
 </html>
