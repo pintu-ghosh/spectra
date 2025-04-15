@@ -92,7 +92,16 @@
       event.target.classList.add('active');
     }
   </script>
+  <script>
+  function updateDateTime() {
+    const now = new Date();
+    const formatted = now.toLocaleString(); // e.g., "4/15/2025, 3:45:30 PM"
+    document.getElementById('datetime').textContent = formatted;
+  }
 
+  updateDateTime(); // Show immediately
+  setInterval(updateDateTime, 1000); // Update every second
+  </script>
   <hr />
   <p><em>Thanks for visiting!</em> <span style="display: inline-block; margin-left: 10ch;">Current date and time: <span id="datetime"></span></span></p>
 
