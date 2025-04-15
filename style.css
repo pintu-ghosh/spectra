@@ -92,5 +92,36 @@ iframe {
   height: 800px;
   border: none;
 }
+.line-with-text {
+  text-align: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+.line-with-text span {
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 1.2em;
+  color: #444;
+  position: relative;
+}
+
+.line-with-text::before,
+.line-with-text::after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  background: #ccc;
+  width: 30%;
+  vertical-align: middle;
+}
+
+.line-with-text::before {
+  margin-right: 10px;
+}
+
+.line-with-text::after {
+  margin-left: 10px;
+}
 
 
