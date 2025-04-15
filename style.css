@@ -1,27 +1,22 @@
 /* Custom Theme Styles */
 .site-header {
-  text-align: center;
-}
-
-.header-img {
-  width: 100%; /* or any fixed size you want */
-  height: auto;
-  display: block;
-}
-
-.header-text {
-  margin-top: 20px;
-  font-size: 2em;
-  color: #333; /* adjust as needed */
-}
-
+      background-image: url('header-image.png');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2em;
+      position: relative;
+    }
 .site-header::before {
   content: "";
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
 }
-
 .site-header h1 {
   display: flex;
   flex-direction: column;
