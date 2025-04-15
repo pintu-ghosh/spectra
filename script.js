@@ -5,11 +5,27 @@ function showTab(id) {
   event.target.classList.add('active');
 }
 
+
 function updateDateTime() {
   const now = new Date();
-  const formatted = now.toLocaleString();
-  document.getElementById('datetime').textContent = formatted;
+
+  const date = now.toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+
+  const time = now.toLocaleTimeString('en-US', {
+    hour: 'numeric',
+    minute: '2-digit',
+    second: '2-digit'
+  });
+
+  document.getElementById('datetime').textContent = `${date} – ${time}`;
 }
 
 updateDateTime();
-setInterval(updateDateTime, 1000);
+setInterval(updateDateTime, 1000); // update every second
+
+
