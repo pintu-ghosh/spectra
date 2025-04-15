@@ -1,4 +1,28 @@
 /* Custom Theme Styles */
+.site-header {
+  position: relative;
+  background-image: url('header-pic.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+}
+
+.site-header h1 {
+  position: relative;
+  z-index: 1;
+}
 
 body {
   font-family: 'Segoe UI', sans-serif;
