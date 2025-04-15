@@ -27,7 +27,21 @@
   padding-bottom: 20px;
   color: #ffffff; /* White text */
 }
+.site-header {
+  text-align: center;
+}
 
+.header-img {
+  width: 100%; /* or any fixed size you want */
+  height: auto;
+  display: block;
+}
+
+.header-text {
+  margin-top: 20px;
+  font-size: 2em;
+  color: #333; /* adjust as needed */
+}
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #fdfcfb;
