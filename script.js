@@ -30,24 +30,35 @@ setInterval(updateDateTime, 1000); // update every second
 
 
 
+
+
+
+const milestones = document.querySelectorAll(".milestone");
+
 window.addEventListener("scroll", () => {
-  const milestones = document.querySelectorAll(".milestone.hidden");
-  const triggerPoint = window.innerHeight * 0.8;
+  const triggerPoint = window.innerHeight * 0.7;
+  let allVisible = true;
 
-  milestones.forEach((el, index) => {
+  milestones.forEach((el, i) => {
     const rect = el.getBoundingClientRect();
-    if (rect.top < triggerPoint) {
-      setTimeout(() => {
-        el.classList.remove("hidden");
 
-        // Set color from data attribute
-        const color = el.getAttribute("data-color");
-        el.querySelector(".dot").style.backgroundColor = color;
-        el.querySelector(".line").style.backgroundColor = color;
-      }, index * 200);
+    if (rect.top < triggerPoint && el.classList.contains("hidden")) {
+      el.classList.remove("hidden");
+      const color = el.getAttribute("data-color");
+      el.querySelector(".bar").style.backgroundColor = color;
+      el.querySelector(".dot").style.backgroundColor = color;
+      el.querySelector(".line").style.backgroundColor = color;
+    }
+
+    if (el.classList.contains("hidden")) {
+      allVisible = false;
     }
   });
-});
 
+  // Optional: if all revealed, do something else here
+  if (allVisible) {
+    console.log("All milestones are now visible!");
+  }
+});
 
 
