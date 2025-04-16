@@ -29,10 +29,25 @@ updateDateTime();
 setInterval(updateDateTime, 1000); // update every second
 
 
-window.addEventListener('scroll', () => {
-  const timeline = document.querySelector('.timeline');
-  const scrollY = window.scrollY;
-  timeline.style.transform = `translateX(-${scrollY}px)`;
+
+window.addEventListener("scroll", () => {
+  const milestones = document.querySelectorAll(".milestone.hidden");
+  const triggerPoint = window.innerHeight * 0.8;
+
+  milestones.forEach((el, index) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < triggerPoint) {
+      setTimeout(() => {
+        el.classList.remove("hidden");
+
+        // Set color from data attribute
+        const color = el.getAttribute("data-color");
+        el.querySelector(".dot").style.backgroundColor = color;
+        el.querySelector(".line").style.backgroundColor = color;
+      }, index * 200);
+    }
+  });
 });
+
 
 
