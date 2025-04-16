@@ -71,8 +71,8 @@ img.profile {
 }
 .tab {
   display: none;
-  padding: 1rem;
-  border-top: 2px solid #ccc;
+  padding: 2rem;
+  border-top: 4px solid #ccc;
 }
 
 .tab-buttons button {
