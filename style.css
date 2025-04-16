@@ -146,7 +146,7 @@ iframe {
 
 .milestone {
   position: relative;
-  min-width: 200px;
+  min-width: 100px;
   text-align: center;
   opacity: 50;
   transform: translateY(0);
