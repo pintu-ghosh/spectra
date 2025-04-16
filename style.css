@@ -148,13 +148,13 @@ iframe {
   position: relative;
   min-width: 200px;
   text-align: center;
-  opacity: 10;
+  opacity: 50;
   transform: translateY(0);
   transition: all 0.6s ease;
 }
 
 .milestone.hidden {
-  opacity: 0;
+  opacity: 50;
   transform: translateY(50px);
 }
 
@@ -191,7 +191,7 @@ iframe {
 }
 
 .content {
-  background: white;
+  background: #D3D3D3;
   padding: 12px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
