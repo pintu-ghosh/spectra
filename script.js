@@ -29,3 +29,10 @@ updateDateTime();
 setInterval(updateDateTime, 1000); // update every second
 
 
+window.addEventListener('scroll', () => {
+  const timeline = document.querySelector('.timeline');
+  const scrollY = window.scrollY;
+  timeline.style.transform = `translateX(-${scrollY}px)`;
+});
+
+
