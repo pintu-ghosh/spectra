@@ -166,7 +166,7 @@ iframe {
 }
 
 .bar {
-  height: 50px;
+  height: 20px;
   width: 100%;
   background-color: #ccc; /* default */
 }
@@ -185,7 +185,7 @@ iframe {
 
 .line {
   width: 4px;
-  height: 50px;
+  height: 100px;
   background-color: #ccc;
   margin: 0 auto;
 }
