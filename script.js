@@ -42,12 +42,6 @@ window.addEventListener('scroll', () => {
     const rect = item.getBoundingClientRect();
     if (rect.top < trigger) {
       item.classList.add('visible');
-
-      const logoPath = item.dataset.logo;
-      const img = item.querySelector('img');
-      if (logoPath && img && !img.src.includes(logoPath)) {
-        img.src = logoPath;
-      }
     }
   });
 });
