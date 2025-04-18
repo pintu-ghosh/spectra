@@ -151,7 +151,7 @@ iframe {
 }
 
 .timeline-item {
-  width: 80%;
+  width: 100%;
   margin: 60px 0;
   display: flex;
   justify-content: flex-start;    
