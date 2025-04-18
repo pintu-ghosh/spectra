@@ -128,81 +128,70 @@ iframe {
 
 
 
-
-.timeline-container {
-  height: 200vh; /* Make page scrollable */
-  padding-top: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-}
-
 .timeline {
-  display: flex;
-  flex-direction: row;
-  gap: 100px;
-  overflow-x: auto;
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 20px 0;
 }
 
-.milestone {
-  position: relative;
-  min-width: 100px;
-  text-align: center;
-  opacity: 50;
-  transform: translateY(0);
+.timeline-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 100px 0;
+  opacity: 0;
+  transform: translateY(50px);
   transition: all 0.6s ease;
 }
 
-.milestone.hidden {
-  opacity: 50;
-  transform: translateY(50px);
+.timeline-item.left {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 
-.bar-dot {
-  position: relative;
-  height: 10px;
-  background-color: #ccc;
-  margin-bottom: 10px;
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.bar {
-  height: 20px;
-  width: 100%;
-  background-color: #ccc; /* default */
+.logo-line {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
-.dot {
-  width: 20px;
-  height: 20px;
-  background-color: #ccc;
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
   border-radius: 50%;
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  background-color: white;
 }
 
-.line {
-  width: 4px;
-  height: 100px;
-  background-color: #ccc;
-  margin: 0 auto;
+.connector {
+  width: 60px;
+  height: 2px;
+  background-color: #aaa;
+  margin: 0 10px;
 }
 
-.content {
-  background: #D3D3D3;
-  padding: 12px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  margin-top: 15px;
-  color: #333;
+.content-box {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  max-width: 300px;
 }
 
-.content span {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
+.timeline-item.left .connector {
+  margin-left: 10px;
+}
+
+.timeline-item.right .connector {
+  margin-right: 10px;
 }
 
 
