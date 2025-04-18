@@ -33,7 +33,6 @@ setInterval(updateDateTime, 1000); // update every second
 
 
 
-
 const items = document.querySelectorAll('.timeline-item');
 
 window.addEventListener('scroll', () => {
@@ -45,7 +44,7 @@ window.addEventListener('scroll', () => {
       item.classList.add('visible');
 
       const logoPath = item.dataset.logo;
-      const img = item.querySelector('img.logo');
+      const img = item.querySelector('img');
       if (logoPath && img && !img.src.includes(logoPath)) {
         img.src = logoPath;
       }
