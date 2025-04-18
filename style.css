@@ -154,14 +154,12 @@ iframe {
   width: 80%;
   margin: 60px 0;
   display: flex;
+  justify-content: flex-start;    
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease;
 }
 
-.timeline-item.left {
-  justify-content: flex-start;
-}
 .timeline-item.right {
   justify-content: flex-end;
 }
