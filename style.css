@@ -139,18 +139,7 @@ iframe {
   gap: 100px;
 }
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 8px;
-  height: 100%;
-  background: linear-gradient(to bottom, #FF6B6B, #6BCB77, #4D96FF);
-  border-radius: 999px;
-  z-index: -1;
-}
+
 
 .timeline-item {
   display: grid;
