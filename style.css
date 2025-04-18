@@ -126,15 +126,29 @@ iframe {
 
 
 
-
-
 .timeline {
   position: relative;
   width: 90%;
   max-width: 800px;
   margin: 100px auto;
-  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(to bottom, #FF6B6B, #6BCB77, #4D96FF); /* Gradient */
+  border-radius: 999px;
+  z-index: -1;
+}
+
 
 .timeline-item {
   display: flex;
@@ -192,6 +206,14 @@ iframe {
 
 .timeline-item.right .connector {
   margin-right: 10px;
+}
+
+.timeline-item.left {
+  margin-right: 40px;
+}
+
+.timeline-item.right {
+  margin-left: 40px;
 }
 
 
