@@ -178,11 +178,13 @@ iframe {
 .timeline-item.left .content {
   flex-direction: row-reverse;
   text-align: right;
+  margin-right: 60px; /* Increase = more gap from spine */    
 }
 
 .timeline-item.right .content {
   flex-direction: row;
   text-align: left;
+  margin-left: 60px; /* Increase = more gap from spine */    
 }
 
 .logo img {
